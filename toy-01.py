@@ -17,6 +17,8 @@ for file in file_listing:
         sentences = text.split('.')
         for sentence in sentences:
             for target in targets:
+                #removes commas from sentence
+                target = target.replace(',')
                 if target in sentence:
                     print(target + ":: " + sentence)
 
