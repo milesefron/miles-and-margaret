@@ -11,6 +11,9 @@ for file in file_listing:
         f = open(data_directory + '/' + file)
         text = f.read()
 
+#convert text to lowercase
+        text = text.lower()
+
         sentences = text.split('.')
         for sentence in sentences:
             for target in targets:
